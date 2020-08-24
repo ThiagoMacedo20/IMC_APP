@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/candal"
+        android:gravity="center"
+        android:text="Bem Vindo ao IMC Calculator"
+        android:textColor="@color/corTitulo"
+        android:textSize="45sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtAltura"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="70dp"
+        android:background="@drawable/imput_name_radius"
+        android:gravity="center"
+        android:hint="Digite sua Altura em M"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/corFont"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/edtPeso"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/imput_name_radius"
+        android:gravity="center"
+        android:hint="Digite o seu peso em KG"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/corFont"
+        app:layout_constraintEnd_toEndOf="@+id/edtAltura"
+        app:layout_constraintStart_toStartOf="@+id/edtAltura"
+        app:layout_constraintTop_toBottomOf="@+id/edtAltura" />
+
+    <Button
+        android:id="@+id/btCalcular"
+        android:layout_width="165dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/bg_bt"
+        android:fontFamily="@font/candal"
+        android:text="Calcular"
+        android:shadowColor="@color/corFont"
+        android:textColor="@color/corTitulo"
+        android:textSize="18dp"
+        app:layout_constraintEnd_toEndOf="@+id/edtPeso"
+        app:layout_constraintStart_toStartOf="@+id/edtPeso"
+        app:layout_constraintTop_toBottomOf="@+id/edtPeso" />
+
+    <TextView
+        android:id="@+id/textToast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="@+id/btCalcular"
+        app:layout_constraintStart_toStartOf="@+id/btCalcular"
+        app:layout_constraintTop_toBottomOf="@+id/btCalcular" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
